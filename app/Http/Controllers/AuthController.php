@@ -74,7 +74,7 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return back()->with('alert-error-register-input', json_decode($validator->errors(), true));
         } elseif ($user->save()) {
-            return redirect()->route('dashboard')->with('alert-succes', 'berhasil register');
+            return redirect()->route('home')->with('alert-succes', 'berhasil register');
         } else {
             return back()->with('alert-error-register', 'gagal register');
         }

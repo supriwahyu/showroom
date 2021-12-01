@@ -17,6 +17,11 @@ Showroom Mobil
 </style>
 @endsection
 @section('content')
+                            @if (session('alert-succes'))
+                            <div class="alert alert-success">
+                                {{ session('alert-succes') }}
+                            </div>
+                            @endif
 <div class="thumbnail">
   <img class="img-fluid" alt="Responsive image" src="https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/wp-content/uploads/2018/01/IMG_7628.jpg">
       <div class="caption post-content">
@@ -49,11 +54,11 @@ Showroom Mobil
     <form  method="POST" action="{{route('register')}}">
       @csrf
       name
-      <input class="form-control" type="text" name="name">
+      <input class="form-control" type="text" name="name" required>
       email
-      <input class="form-control" type="email" name="email">
+      <input class="form-control" type="email" name="email" required>
       password
-      <input class="form-control" type="password" name="password">
+      <input class="form-control" type="password" name="password" required>
       <button type="submit">submit</button>
     </form>
 
