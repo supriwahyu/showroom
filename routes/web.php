@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\user\DashboardController;
 use App\Http\Controllers\user\TestDriveController;
+use App\Http\Controllers\admin\AdminDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('/contactus', [ContactUsController::class, 'index'])->name('contactus
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admindashboard');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

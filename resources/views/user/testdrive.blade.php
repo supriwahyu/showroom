@@ -118,6 +118,21 @@
                             <div class="card strpied-tabled-with-hover">
 
                                 <div class="card-header ">
+                                      @if (session('success'))
+                                      <div class="alert alert-success">
+                                          {{ session('success') }}
+                                      </div>
+                                      @endif
+                                        @if (session('success2'))
+                                      <div class="alert alert-success">
+                                          {{ session('success2') }}
+                                      </div>
+                                      @endif
+                                        @if (session('success3'))
+                                      <div class="alert alert-success">
+                                          {{ session('success3') }}
+                                      </div>
+                                      @endif
                                     <h4 class="card-title">test drive mobil</h4>
                                     <p class="card-category">tes drive mobil size dan tipe</p>
                                     <a href="{{url('testdrivelist/create')}}">registerasi tes drive</a>
@@ -154,6 +169,7 @@
                                         </tbody>
                                         @endforeach
                                     </table>
+                                    {{$cars->links()}}
                                 </div>
                             </div>
                         </div>

@@ -17,10 +17,10 @@ produk Showroom Mobil
 </style>
 @endsection
 @section('content')
-<div class="thumbnail">
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
   <img class="img-fluid" alt="Responsive image" src="https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/wp-content/uploads/2018/01/IMG_7628.jpg">
       <div class="caption post-content">
-        <h1>Produk Showroom</h1>
+        <h1 class="p-3 mb-2 bg-primary text-white">Produk Showroom</h1>
         <p>Lorem ipsum dolor sit amet</p> 
     </div>
 </div>
@@ -36,6 +36,7 @@ produk Showroom Mobil
 </div>
 @endforeach
 </div>
+{{$cars->links()}}
 @endsection
 @section('script')
 

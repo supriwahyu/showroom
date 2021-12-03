@@ -66,13 +66,13 @@
                 </div>
                 <ul class="nav">
                     <li>
-                        <a class="nav-link" href="{{route('dashboard')}}">
+                        <a class="nav-link" href="#">
                             <i class="nc-icon nc-chart-pie-35 active"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="{{route('testdrive')}}">
+                        <a class="nav-link" href="#">
                             <i class="nc-icon nc-circle-09"></i>
                             <p>test drive</p>
                         </a>
@@ -102,7 +102,7 @@
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('logout')}}">
+                                <a class="nav-link" href="#">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
@@ -139,19 +139,19 @@
                                             <th>Size</th>
                                             <th>Model</th>
                                         </thead>
-                                        @foreach ($cars as $car)
+                                        #
                                         <tbody>
                                             <tr>
-                                                <td>{{$car->id}}</td>
-                                                <td>{{$car->name}}</td>
-                                                <td>{{$car->price}}</td>
-                                                <td>{{$car->size}}</td>
-                                                <td>{{$car->model}}</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
+                                                <td>#</td>
                                             </tr>
                                         </tbody>
-                                        @endforeach
+                                        #
                                     </table>
-                                    {{$cars->links()}}
+                                    #
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="{{route('dashboard')}}">Dashboard</a>, made with love for a better web
+                            <a href="#">Dashboard</a>, made with love for a better web
                         </p>
                     </nav>
                 </div>
@@ -182,7 +182,7 @@
         </a>
 
         <ul class="dropdown-menu">
-			<li class="header-title"> Sidebar Style</li>
+            <li class="header-title"> Sidebar Style</li>
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger">
                     <p>Background Image</p>
@@ -246,7 +246,7 @@
             <li class="header-title" id="sharrreTitle">Thank you for sharing!</li>
 
             <li class="button-container">
-				<button id="twitter" class="btn btn-social btn-outline btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
+                <button id="twitter" class="btn btn-social btn-outline btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
                 <button id="facebook" class="btn btn-social btn-outline btn-facebook btn-round sharrre"><i class="fa fa-facebook-square"></i> · 426</button>
             </li>
         </ul>
@@ -274,13 +274,6 @@
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="https://demos.creative-tim.com/light-bootstrap-dashboard/assets/js/demo.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-        demo.showNotification();
-
-    });
 </script>
 
 

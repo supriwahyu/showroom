@@ -15,6 +15,7 @@ class ProdukController extends Controller
     public function index()
     {
         $cars = Car::all();
+        $cars = Car::paginate(4);
         return view('produk', compact('cars'));
     }
 

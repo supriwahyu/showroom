@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Car;
 
-class DashboardController extends Controller
+class AdminDashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
-        $cars = Car::paginate(5);
-        return view('user.dashboard', compact('cars'));
+        return view('admin.admindashboard');
     }
 
     /**

@@ -17,6 +17,7 @@ class TestDriveController extends Controller
     public function index()
     {
         $cars = Car::all();
+        $cars = Car::paginate(5);
         return view('user.testdrive', compact('cars'));
     }
 
@@ -61,7 +62,7 @@ class TestDriveController extends Controller
         $testdrive->size = $size;
         $testdrive->model = $model;
         $testdrive->save();
-        return redirect()->route('testdrive')->with('success', 'Artikel berhasil terbuat');;
+        return redirect()->route('testdrive')->with('success', 'test berhasil terbuat');;
     }
 
     /**
@@ -107,7 +108,7 @@ class TestDriveController extends Controller
         $size = $request->size;
         $model = $request->model;
 
-        return redirect()->route('testdrive')->with('success',' Data telah diperbaharui!');
+        return redirect()->route('testdrive')->with('success2',' test telah diperbaharui!');
     }
 
     /**
@@ -120,6 +121,6 @@ class TestDriveController extends Controller
     {
         $cars = Car::find($id);
         $cars->delete();
-        return redirect('testdrive')->with('success', 'Artikel berhasil terhapus');
+        return redirect('testdrive')->with('success3', 'test berhasil terhapus');
     }
 }

@@ -15,6 +15,7 @@ class LandingPageController extends Controller
     public function index()
     {
         $cars = Car::all();
+        $cars = Car::paginate(4);
         return view('landingpage', compact('cars'));
     }
 
