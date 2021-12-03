@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
 
 class LandingPageController extends Controller
 {
@@ -13,7 +14,8 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        return view('landingpage');
+        $cars = Car::all();
+        return view('landingpage', compact('cars'));
     }
 
     /**
