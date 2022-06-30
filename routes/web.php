@@ -10,6 +10,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\user\DashboardController;
 use App\Http\Controllers\user\TestDriveController;
 use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('testdrivelist/edit/{id}', [TestDriveController::class, 'edit'])->name('edit');
 	Route::put('testdrivelist/update/{id}', [TestDriveController::class, 'update'])->name('update');
 	Route::delete('testdrivelist/delete/{id}', [TestDriveController::class, 'destroy'])->name('delete');
+	Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
 	});

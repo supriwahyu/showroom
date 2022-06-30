@@ -6,13 +6,16 @@ Showroom Mobil
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 <style type="text/css">
   .post-content {
-    top:50%;
-    left:50%;
+    top:25%;
+    left:25%;
     position: absolute;
     color: black;
 }
 .thumbnail{
     position:relative;
+}
+.card {
+  margin: 50px;
 }
 </style>
 @endsection
@@ -25,14 +28,15 @@ Showroom Mobil
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
   <img class="img-fluid" alt="Responsive image" src="https://hips.hearstapps.com/amv-prod-cad-assets.s3.amazonaws.com/wp-content/uploads/2018/01/IMG_7628.jpg">
       <div class="caption post-content">
-        <h1 class="p-3 mb-2 bg-primary text-white">Shoroom Mobil</h1>
-        <p>Lorem ipsum dolor sit amet</p> 
+        <h1 class="bg-primary text-white">Shoroom Mobil</h1>
+        <p class="text-white">Lorem ipsum dolor sit amet</p> 
     </div>
 </div>
 <div class="d-flex justify-content-center">
   <u>daftar dan login untuk test drive</u>
 </div>
 <div class="d-flex justify-content-around bg-light">
+  <div style="width:25px;"></div>
   <div class="wrapper" style="width:300px;">
     Login
     <form method="POST" action="{{route('login')}}">
@@ -52,6 +56,8 @@ Showroom Mobil
   </div>
   @endif
 </div>
+<br>
+<div style="width:25px;"></div>
 <div class="wrapper" style="width:300px;">
   Register
     <form  method="POST" action="{{route('register')}}">
@@ -74,17 +80,20 @@ Showroom Mobil
   </div>
   @endif
   </div>
+  <div style="width:25px;"></div>
 </div>
 <br>
-<div class="d-flex justify-content-around ml-3">
+<div class="d-flex justify-content-center ml-3">
   <div class="shadow-lg p-3 mb-5 bg-white rounded">
     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
   </div>
+   </div>
+   <div style="width:25px;"></div>
   <div class="shadow-lg p-3 mb-5 bg-white rounded">
     <img class="img-fluid" src="https://tolleson.com/wp-content/uploads/2020/09/Lucid-Retail-1-1.jpg">
-  </div>
+ 
 </div>
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-between">
   <div class="img-thumbnail">
   <img class="img-fluid" src="https://archello.s3.eu-central-1.amazonaws.com/images/2020/02/18/1showrm.1582040396.6434.jpg">
   </div>
@@ -96,8 +105,10 @@ Showroom Mobil
   </div>
 </div>
 <br>
-<div class="d-flex flex-wrap">
+<div class="container">
+  <div class="row">
   @foreach ($cars as $car)
+   <div class="col-lg-4 col-md-6">
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="https://s1.cdn.autoevolution.com/images/news/gallery/top-5-cheapest-v8-cars-on-sale-in-europe-in-2016_3.jpeg" alt="Card image cap">
   <div class="card-body">
@@ -106,7 +117,9 @@ Showroom Mobil
     <a href="#" class="btn btn-primary">{{$car->price}}</a>
   </div>
 </div>
+</div>
 @endforeach
+</div>
 </div>
 {{$cars->links()}}
 @endsection
