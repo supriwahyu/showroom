@@ -48,7 +48,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
     <!-- End Google Tag Manager -->
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/7/intl/es_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/7/intl/es_ALL/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/33/7/intl/es_ALL/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttps%3A%2F%2Fdemos.creative-tim.com%2Flight-bootstrap-dashboard%2Fexamples%2Fdashboard.html%3F_ga%3D2.22224315.1471826603.1531747550-1340017084.1530656181&amp;4sAIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU&amp;callback=_xdc_._4ykeoi&amp;key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU&amp;token=53352"></script></head>
+    </head>
 
     <body>
     <div class="wrapper">
